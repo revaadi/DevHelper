@@ -11,7 +11,7 @@ function App() {
   const [output, setOutput] = useState('');
   const [selectedTool, setSelectedTool] = useState('explain');
   const [showLanding, setShowLanding] = useState(true);
-  const [language, setLanguage] = useState('python');  // default
+  const [language, setLanguage] = useState('');
 
 
   useEffect(() => {
@@ -117,10 +117,11 @@ function App() {
           onChange={(e) => setLanguage(e.target.value)}
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
-          <option value="python">🐍 Python</option>
-          <option value="javascript">🟨 JavaScript</option>
-          <option value="java">☕ Java</option>
-          <option value="c++">💻 C++</option>
+          <option value="" disabled> Choose a language </option>
+          <option value="python"> Python </option>
+          <option value="javascript"> JavaScript </option>
+          <option value="java"> Java </option>
+          <option value="c++"> C++ </option>
         </select>
 
 
